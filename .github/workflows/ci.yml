@@ -35,14 +35,11 @@ jobs:
           npm run build
           npm run generate
 
-      - name: Commit files
+      - name: Commit and push if changed
         run: |
           git config --local user.email "hi.xieshuang@gmail.com"
           git config --local user.name "shalldie"
-          git commit -m "GitHub Action Schedule Job" -a
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          git diff
+          git add .
+          git commit -m "GitHub Action Schedule Job" || exit 0
+          git push
