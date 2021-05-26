@@ -5,7 +5,7 @@
 <td valign="top" width="50%">
 <br>
 📜 <a href="<%= data.host %>/about" target="_blank">Overview 概览</a>
-
+<br>
 <!-- overview starts -->
 -   🔭 正在努力工作
 -   🤔 遇到感兴趣的都想去了解，最新的文章标签是： 👇
@@ -18,7 +18,7 @@
 <td valign="top" width="50%">
 <br>
 📘 <a href="<%= data.host %>" target="_blank">Recent articles 最近写的东西</a>
-
+<br>
 <!-- blog starts -->
 <% for (var i = 0; i < data.list.length; i++) { %>
 -   <a href="<%= data.list[i].url %>" target="_blank"><%= data.list[i].title %></a> - <%= data.list[i].publishTime %><% } %>
