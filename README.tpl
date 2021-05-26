@@ -19,7 +19,7 @@
 </td>
 <td valign="top" width="50%">
 
-#### 📘 <a href="<%= data.host %>" target="_blank">Recent articles 最近写的东西</a>
+#### 📘 <a href="<%= data.host %>/article" target="_blank">Recent articles 最近写的东西</a>
 
 <!-- blog starts -->
 <% for (var i = 0; i < data.list.length; i++) { %>
