@@ -1,11 +1,11 @@
-👋 Hi，我是 xieshuang ，写过 .net 、node，现在是个切图仔，偶尔拯救世界。以下内容通过 [GitHub Action](https://github.com/shalldie/shalldie) 自动更新
+👋 Hi，我是 xieshuang ，写过 .net 、node，现在是个切图仔，偶尔拯救世界。以下内容通过 [GitHub Action](https://github.com/shalldie/shalldie/actions) 自动更新
 
 <table>
 <tr>
 <td valign="top" width="50%">
-<br>
-📜 <a href="https://nosaid.com/about" target="_blank">Overview 概览</a>
-<br>
+
+#### 📜 <a href="https://nosaid.com/about" target="_blank">Overview 概览</a>
+
 <!-- overview starts -->
 -   🔭 正在努力工作
 -   🤔 遇到感兴趣的都想去了解，最新的文章标签是： 👇
@@ -16,9 +16,9 @@
 
 </td>
 <td valign="top" width="50%">
-<br>
-📘 <a href="https://nosaid.com" target="_blank">Recent articles 最近写的东西</a>
-<br>
+
+#### 📘 <a href="https://nosaid.com" target="_blank">Recent articles 最近写的东西</a>
+
 <!-- blog starts -->
 
 -   <a href="https://nosaid.com/article/k3s-in-1core1g" target="_blank">在 1 核 1G 上使用 k3s</a> - 2021-03-15
