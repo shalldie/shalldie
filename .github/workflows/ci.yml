@@ -1,0 +1,48 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ci
+
+# Controls when the action will run.
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # checkout
+      - uses: actions/checkout@v2
+      # 准备node环境
+      - name: Use Node.js 14 🐼
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      # Generate README.md
+      - name: Generate README.md
+      run: |
+        npm ci
+        npm run build
+        npm run generate
+
+      - name: Commit files
+        run: |
+          git config --local user.email "hi.xieshuang@gmail.com"
+          git config --local user.name "shalldie"
+          git commit -m "GitHub Action Schedule Job" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

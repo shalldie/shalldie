@@ -1,0 +1,29 @@
+{
+  "name": "shalldie",
+  "version": "1.0.0",
+  "description": "Respository for GitHub profile.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "generate": "node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalldie/shalldie.git"
+  },
+  "author": "shalldie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shalldie/shalldie/issues"
+  },
+  "homepage": "https://github.com/shalldie/shalldie#readme",
+  "devDependencies": {
+    "@types/got": "^9.6.11",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "got": "^11.8.2",
+    "mini-tpl": "^1.1.1"
+  }
+}
