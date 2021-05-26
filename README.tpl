@@ -8,8 +8,8 @@
 
 <!-- overview starts -->
 -   🔭 正在努力工作
--   🤔 遇到感兴趣的都想去了解，最新的文章标签是： 👇
--   <%= data.labels.map(lbl=> `\`${lbl}\``).join('、') %>
+-   🤔 遇到感兴趣的都想去了解，最新的文章标签是：👇
+-   <%= data.labels.map(lbl=> `<a href="${lbl.url}" target="_blank">${lbl.name}</a>`).join('、') %>
 -   📫 可以通过邮箱联系我： hi.xieshuang@gmail.com
 -   💬 看看我的 [个人博客](<%= data.host %>)，在 [留言板](<%= data.host %>/message) 告诉我点什么
 <!-- overview ends -->

@@ -17,7 +17,10 @@ interface IArticle {
 
 type TTplData = {
     host: string;
-    labels: string[];
+    labels: {
+        name: string;
+        url: string;
+    }[];
     list: {
         title: string; // 标题
         url: string; // 地址
@@ -58,7 +61,11 @@ function dateFormat(date: Date, format: string) {
         labels: list
             .map(n => n.labels)
             .reduce((pre, next) => [...new Set([...pre, ...next])], [])
-            .slice(0, 5),
+            .slice(0, 5)
+            .map(lbl => ({
+                name: lbl,
+                url: `${HOST_URL}/article?label=${encodeURIComponent(lbl)}`
+            })),
         list: list.map(item => {
             return {
                 title: item.title,
