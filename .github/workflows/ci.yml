@@ -29,11 +29,11 @@ jobs:
           node-version: "14"
 
       # Generate README.md
-      - name: "Generate README.md"
-      run: |
-        npm ci
-        npm run build
-        npm run generate
+      - name: Generate README.md
+        run: |
+          npm ci
+          npm run build
+          npm run generate
 
       - name: Commit files
         run: |
