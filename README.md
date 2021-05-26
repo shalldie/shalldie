@@ -1,4 +1,4 @@
-👋 Hi，我是 xieshuang ，写过 .net 、node，现在是个切图仔，偶尔拯救世界。以下内容通过 [GitHub Action](https://github.com/shalldie/shalldie/actions) 自动更新
+👋 Hi，我是 xieshuang ，写过 `.net`、`node`，现在是个切图仔，偶尔拯救世界。以下内容通过 [GitHub Action](https://github.com/shalldie/shalldie/actions) 自动更新：
 
 <table>
 <tr>
