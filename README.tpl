@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td valign="top" width="50%">
-
+<br>
 📜 <a href="<%= data.host %>/about" target="_blank">Overview 概览</a>
 
 <!-- overview starts -->
@@ -16,7 +16,7 @@
 
 </td>
 <td valign="top" width="50%">
-
+<br>
 📘 <a href="<%= data.host %>" target="_blank">Recent articles 最近写的东西</a>
 
 <!-- blog starts -->
