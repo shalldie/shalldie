@@ -14,6 +14,8 @@
 -   💬 看看我的 [个人博客](<%= data.host %>)，在 [留言板](<%= data.host %>/message) 告诉我点什么
 <!-- overview ends -->
 
+<img width="500" height="1">
+
 </td>
 <td valign="top" width="50%">
 
@@ -23,6 +25,8 @@
 <% for (var i = 0; i < data.list.length; i++) { %>
 -   <a href="<%= data.list[i].url %>" target="_blank"><%= data.list[i].title %></a> - <%= data.list[i].publishTime %><% } %>
 <!-- blog ends -->
+
+<img width="500" height="1">
 
 </td>
 </tr>
