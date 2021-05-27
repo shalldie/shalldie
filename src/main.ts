@@ -5,7 +5,7 @@ import tpl from 'mini-tpl';
 
 const HOST_URL = 'https://nosaid.com';
 const MD_TEMPLATE = fs.readFileSync(path.join(__dirname, '../README.tpl'), 'utf-8');
-const Blog_List_Url = `${HOST_URL}/api/article/list`;
+const BLOG_LIST_URL = `${HOST_URL}/api/article/list`;
 
 interface IArticle {
     name: string;
@@ -15,8 +15,13 @@ interface IArticle {
     labels: string[];
 }
 
-type TTplData = {
-    host: string;
+interface ITplData {
+    url: {
+        index: string;
+        about: string;
+        message: string;
+        article: string;
+    };
     labels: {
         name: string;
         url: string;
@@ -26,7 +31,7 @@ type TTplData = {
         url: string; // 地址
         publishTime: string; // 发布时间
     }[];
-};
+}
 
 function dateFormat(date: Date, format: string) {
     const dict: Record<string, number> = {
@@ -48,7 +53,7 @@ function dateFormat(date: Date, format: string) {
 }
 
 (async function main() {
-    const { body: list } = await got.post<IArticle[]>(Blog_List_Url, {
+    const { body: list } = await got.post<IArticle[]>(BLOG_LIST_URL, {
         json: {
             page: 1,
             pageSize: 5
@@ -56,8 +61,14 @@ function dateFormat(date: Date, format: string) {
         responseType: 'json'
     });
 
-    const tplData: TTplData = {
-        host: HOST_URL,
+    const tplData: ITplData = {
+        // host: HOST_URL,
+        url: {
+            index: HOST_URL,
+            about: `${HOST_URL}/about`,
+            article: `${HOST_URL}/article`,
+            message: `${HOST_URL}/message`
+        },
         labels: list
             .map(n => n.labels)
             .reduce((pre, next) => [...new Set([...pre, ...next])], [])

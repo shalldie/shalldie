@@ -4,14 +4,14 @@
 <tr>
 <td valign="top" width="50%">
 
-#### 📜 <a href="<%= data.host %>/about" target="_blank">Overview 概览</a>
+#### 📜 [Overview 概览](<%= data.url.about %>)
 
 <!-- overview starts -->
 -   🔭 正在努力工作
 -   🤔 遇到感兴趣的都想去了解，最新的文章标签是：👇
--   <%= data.labels.map(lbl=> `<a href="${lbl.url}" target="_blank">${lbl.name}</a>`).join('、') %>
+-   <%= data.labels.map(lbl=> `[${lbl.name}](${lbl.url})`).join('、') %>
 -   📫 可以通过邮箱联系我： hi.xieshuang@gmail.com
--   💬 看看我的 [个人博客](<%= data.host %>)，在 [留言板](<%= data.host %>/message) 告诉我点什么
+-   💬 看看我的 [个人博客](<%= data.url.index %>)，在 [留言板](<%= data.url.message %>) 告诉我点什么
 <!-- overview ends -->
 
 <img width="500" height="1">
@@ -19,11 +19,11 @@
 </td>
 <td valign="top" width="50%">
 
-#### 📘 <a href="<%= data.host %>/article" target="_blank">Recent articles 最近写的东西</a>
+#### 📘 [Recent articles 最近写的东西](<%= data.url.article %>)
 
 <!-- blog starts -->
 <% for (var i = 0; i < data.list.length; i++) { %>
--   <a href="<%= data.list[i].url %>" target="_blank"><%= data.list[i].title %></a> - <%= data.list[i].publishTime %><% } %>
+-   [<%= data.list[i].title %>](<%= data.list[i].url %>) - <%= data.list[i].publishTime %><% } %>
 <!-- blog ends -->
 
 <img width="500" height="1">
