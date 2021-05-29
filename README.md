@@ -9,7 +9,7 @@
 <!-- overview starts -->
 -   🔭 正在努力工作
 -   🤔 遇到感兴趣的都想去了解，最新的文章标签是：👇
--   [猫](https://nosaid.com/article?label=%E7%8C%AB)、[Traefik](https://nosaid.com/article?label=Traefik)、[Kubernetes](https://nosaid.com/article?label=Kubernetes)、[Docker](https://nosaid.com/article?label=Docker)、[k3s](https://nosaid.com/article?label=k3s)
+-   [猫](https://nosaid.com/article?label=%E7%8C%AB)、[Traefik](https://nosaid.com/article?label=Traefik)、[Kubernetes](https://nosaid.com/article?label=Kubernetes)、[Ingress](https://nosaid.com/article?label=Ingress)、[k3s](https://nosaid.com/article?label=k3s)
 -   📫 可以通过邮箱联系我： hi.xieshuang@gmail.com
 -   💬 看看我的 [个人博客](https://nosaid.com)，在 [留言板](https://nosaid.com/message) 告诉我点什么
 <!-- overview ends -->
