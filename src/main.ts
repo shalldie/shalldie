@@ -52,7 +52,7 @@ function dateFormat(date: Date, format: string) {
     return format;
 }
 
-(async function main() {
+async function main() {
     const { body: list } = await got.post<IArticle[]>(BLOG_LIST_URL, {
         json: {
             page: 1,
@@ -88,4 +88,12 @@ function dateFormat(date: Date, format: string) {
 
     const readme = tpl(MD_TEMPLATE, tplData);
     fs.writeFileSync(path.join(__dirname, '../README.md'), readme, 'utf-8');
+}
+
+(async () => {
+    try {
+        await main();
+    } catch (ex) {
+        console.log(ex);
+    }
 })();
