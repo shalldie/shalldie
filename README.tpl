@@ -16,7 +16,7 @@
 -   💬 看看我的 [个人博客](<%= data.url.index %>)，在 [留言板](<%= data.url.message %>) 告诉我点什么
 <!-- overview ends -->
 
-<img width="500" height="1">
+<img width="390" height="1">
 
 </td>
 <td valign="top" width="50%">
@@ -28,7 +28,7 @@
 -   [<%= data.list[i].title %>](<%= data.list[i].url %>) - <%= data.list[i].publishTime %><% } %>
 <!-- blog ends -->
 
-<img width="500" height="1">
+<img width="390" height="1">
 
 </td>
 </tr>
