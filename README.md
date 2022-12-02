@@ -4,7 +4,7 @@
 
 <table>
 <tr>
-<td valign="top">
+<td valign="top" width="50%">
 
 #### 📜 [Overview 概览](https://nosaid.com/about)
 
@@ -19,7 +19,7 @@
 <img width="500" height="1">
 
 </td>
-<td valign="top">
+<td valign="top" width="50%">
 
 #### 📘 [Recent articles 最近写的东西](https://nosaid.com/article)
 
