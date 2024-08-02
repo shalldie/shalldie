@@ -20,24 +20,34 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: szenius/set-timezone@v1.0
+      - uses: szenius/set-timezone@v2.0
         with:
           timezoneLinux: "Asia/Shanghai"
-    
+
       # checkout
-      - uses: actions/checkout@v2
-      # 准备node环境
-      - name: Use Node.js 14 🐼
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      # pnpm 设置、缓存
+      - name: Install pnpm 📂
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "14"
+          # version: 8
+          package_json_file: "package.json"
+
+      # 准备node环境
+      - name: Use Node.js 🐼
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+          cache: "pnpm"
+          cache-dependency-path: "**/pnpm-lock.yaml"
 
       # Generate README.md
       - name: Generate README.md
         run: |
-          npm ci
-          npm run build
-          npm run generate
+          pnpm i
+          pnpm build
+          pnpm generate
 
       - name: Commit and push if changed
         run: |
