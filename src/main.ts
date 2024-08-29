@@ -53,8 +53,8 @@ function dateFormat(date: Date, format: string) {
 }
 
 async function main() {
-    const { body: list } = await got.post<IArticle[]>(BLOG_LIST_URL, {
-        json: {
+    const { body: list } = await got.get<IArticle[]>(BLOG_LIST_URL, {
+        searchParams: {
             page: 1,
             pageSize: 5
         },
